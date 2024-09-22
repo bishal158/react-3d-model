@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400&display=swap");
+
+
+.App {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #282828;
+}
+
+.layout {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.model-container {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f1f1a;
+}
+
+.configurator {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h2 {
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Customize the Canvas size to ensure it's centered and scales well */
+.canvas {
+    width: 100%;
+    height: 100%;
+}
+input[type="color"] {
+    margin-top: 10px;
+    border: none;
+    background: none;
+}
