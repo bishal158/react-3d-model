@@ -11,23 +11,22 @@ import {
 import { useState } from 'react';
 
 function Model(props) {
-    const { scene } = useGLTF('/aventador/scene.gltf');
+    const { scene } = useGLTF('/aventador/scene.gltf'); // Correct path for public folder
 
     // Load the texture
-    const texture = useTexture('/aventador/textures/Material_001_baseColor.png');
+    const texture = useTexture('/aventador/textures/Material_001_baseColor.png'); // Correct path
 
     // Traverse the scene and apply the texture and color
     scene.traverse((object) => {
         if (object.isMesh) {
-            object.material.map = texture; // Apply the texture to the mesh's material
-            object.material.color.set(props.color); // Set the color from props
+
+            object.material.color.set(props.color); // Set color from props
             object.material.needsUpdate = true; // Update the material
         }
     });
 
     return <primitive object={scene} {...props} />;
 }
-
 function App() {
     const [color, setColor] = useState('#ffffff'); // Default color white
 
